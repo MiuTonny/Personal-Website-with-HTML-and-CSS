@@ -1,0 +1,23 @@
+.navbar {
+    background-color: #333;
+    font-size: 1.2em;
+    padding: 1em;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Normal styles */
+body {
+    font-size: 18px;
+  }
+  
+  /* Change styles for smaller screens */
+  @media (max-width: 768px) {
+    body {
+      font-size: 16px;
+    }
+  }
+  

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="aboutMe.css">
+</head>
+
+<body> 
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+    </ul>
+  </nav>
+
+  <main class="main-content">
+    <section id="code-display" style="text-align: center;">
+      <h2>The Simple JavaScrip Code Calculator</h2>
+      <pre style="text-align: left; display: inline-block; text-align: left;"><code>
+        // Simple Calculator
+
+let history = [];
+
+// Calculator functions
+function add(a, b) {
+  const result = a + b;
+  history.push({ operands: [a, b], operator: '+', result: result });
+  console.log(history);
+  return result;
+}
+
+function subtract(a, b) {
+  const result = a - b;
+  history.push({ operands: [a, b], operator: '-', result: result });
+  console.log(history);
+  return result;
+}
+
+function multiplication(a, b) {
+  const result = a * b;
+  history.push({ operands: [a, b], operator: '*', result: result });
+  console.log(history);
+  return result;
+}
+
+function division(a, b) {
+  if (b === 0) {
+    history.push({ operands: [a, b], operator: '/', result: 'Error: Division by zero' });
+    return 'Error: Division by zero';
+  }
+  const result = a / b;
+  history.push({ operands: [a, b], operator: '/', result: result });
+  return result;
+}
+
+// Function to display history
+function displayHistory() {
+  if (history.length === 0) {
+    console.log("No stored calculations yet.");
+  } else {
+    console.log("Calculation History:");
+    history.forEach((entry, index) => {
+      const [a, b] = entry.operands;
+      console.log(`${index + 1}. ${a} ${entry.operator} ${b} = ${entry.result}`);
+    });
+  }
+}
+</code>
+  </pre>
+</section>
+    
+    </section>
+  </main>
+</body>
+</html>

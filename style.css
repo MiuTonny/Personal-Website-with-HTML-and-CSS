@@ -95,3 +95,15 @@ margin: 0.5em;
     bottom: 0;
     width: 100%;
 }
+
+/* Normal styles */
+body {
+    font-size: 18px;
+  }
+  
+  /* Change styles for smaller screens */
+  @media (max-width: 768px) {
+    body {
+      font-size: 16px;
+    }
+  }
